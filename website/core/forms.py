@@ -1,12 +1,11 @@
 from django import forms
 
+from .models import Order
 
-class ContactForm(forms.Form):
+
+class OrderForm(forms.Form):
     """Форма заявки."""
 
-    first_name = forms.CharField(max_length=50)
-    phone_number = forms.IntegerField(min_value=89000000000,
-                                      max_value=89999999999)
-    email = forms.EmailField(max_length=150)
-    message = forms.CharField(widget=forms.Textarea,
-                              max_length=2000)
+    class Meta:
+        model = Order
+        fields = '__all__'

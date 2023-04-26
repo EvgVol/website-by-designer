@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import ContactForm
+from django.views.generic.edit import CreateView
+
+from .forms import OrderForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 
@@ -7,6 +9,11 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'core/index.html')
 
+
+class BookView(CreateView):
+    form_class = OrderForm
+    template_name = 'core/includes/concact_us.html'
+    success_url = '/thankyou/'
 
 # def contact(request):
 #     if request.method == 'POST':
