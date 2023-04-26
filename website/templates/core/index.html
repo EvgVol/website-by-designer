@@ -6,4 +6,18 @@
 {% block content %}
   {% include 'core/includes/home_section.html' %}
   {% include 'core/includes/about_section.html' %}
+  <div class="site-section" id="portfolio-section">
+    <div class="container">
+
+      <div class="row mb-5 ">
+        <div class="col-md-8 section-title text-center mx-auto">
+          <span class="sub-title mb-2 d-block">Наши работы</span>
+          <h2 class="title text-primary mb-3">Работа заканчивается только тогда, когда ваш продукт отпечатают в типографии</h2>
+        </div>
+      </div>
+      {% include 'core/includes/portfolio_section.html' %}
+    </div>
+  </div>
+  {% include 'core/includes/what_we_do.html' %}
+  {% include 'core/includes/concact_us.html' %}
 {% endblock content %}
