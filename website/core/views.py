@@ -17,3 +17,7 @@ def home(request):
         form = OrderForm()
 
     return render(request, 'core/index.html', {'form': form})
+
+
+def policy(request):
+    return render(request, 'core/policy.html')

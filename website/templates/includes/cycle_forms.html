@@ -1,5 +1,5 @@
 {% for field in form %}
-  <div class="form-group row p-3 my-1" 
+  <div class="form-group row p-0 my-3" 
     {% if field.field.required %} 
       aria-required="true" 
     {% else %} 
@@ -13,9 +13,9 @@
     </label>
     {{ field }}
     {% if field.help_text %}
-        <small id="{{ field.id_for_label }}-help" class="form-text text-muted">
-        {{ field.help_text|safe }}
-        </small>
+      <small id="{{ field.id_for_label }}-help" class="form-text text-muted">
+      {{ field.help_text|safe }}
+      </small>
     {% endif %}
   </div>
 {% endfor %}
