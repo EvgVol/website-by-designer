@@ -11,9 +11,9 @@ def index(request):
 
 
 class BookView(CreateView):
+    
     form_class = OrderForm
-    template_name = 'core/includes/concact_us.html'
-    success_url = '/thankyou/'
+    template_name = 'core/index.html'
 
 # def contact(request):
 #     if request.method == 'POST':
