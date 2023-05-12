@@ -1,0 +1,13 @@
+{% autoescape off %}
+
+Новый заказ:
+
+    {{ message }}
+
+    Имя отправителя: {{ first_name }}
+    Телефон отправителя: {{ phone_number }}
+    {% if email %}Email отправителя: {{ email }}{% endif %}
+
+Команда сайта Design.studio63
+
+{% endautoescape %}

@@ -18,7 +18,7 @@ class Order(models.Model):
         'Электронный адрес (email)', max_length=150, 
         help_text='Укажите Email-адрес для связи'
     )
-    message = models.TextField(
+    content = models.TextField(
         'Содержимое письма', blank=False,
     )
     time_create = models.DateTimeField('Дата заявки', auto_now_add=True)
