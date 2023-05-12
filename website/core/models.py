@@ -2,16 +2,19 @@ from django.db import models
 
 from django.core.validators import RegexValidator
 
+
 class Order(models.Model):
     """Модель заказа."""
-    phone_regex = RegexValidator(
-        regex=r'^8\d{10}$',
-        message="Номер телефона должен начинаться с 8 и иметь 11 символов."
-    )
 
     first_name = models.CharField('Имя', max_length=150, blank=False)
     phone_number = models.CharField(
-        'Номер телефона', validators=[phone_regex], blank=False,
+        'Номер телефона', validators=[
+            RegexValidator(
+                regex=r'^8\d{10}$',
+                message="Номер телефона должен начинаться с 8 и иметь 11 символов."
+            )
+        ],
+        blank=False,
         help_text='Укажите номер телефона для связи', max_length=11
     )
     email = models.EmailField(
