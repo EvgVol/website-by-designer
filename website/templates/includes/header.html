@@ -12,17 +12,16 @@
   <div class="site-navbar site-navbar-target js-sticky-header">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-6 col-md-4">
+        <div class="col-7 col-md-5">
           <div class="my-0 site-logo">
             <h1 class="my-0 site-logo">
-              <img href="#" src={% static 'images/fav/favicon-32x32.png' %} alt="">
-              <a href="index.html">Design<span class="text-primary">.</span><span class="text-secondary">studio</span></a>
+              <img href="{% url 'core:index' %}" src={% static 'images/fav/favicon-32x32.png' %} alt="">
+              <a href="{% url 'core:index' %}">Design<span class="text-primary">.</span><span class="text-secondary">studio</span></a>
             </h1>
           </div>
-          
         </div>
         
-        <div class="col-6 col-md-8">
+        <div class="col-4 col-md-6">
           <nav class="site-navigation text-right" role="navigation">
             <div class="container">
 
