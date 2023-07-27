@@ -222,8 +222,6 @@ h1, h2, h3, h4, h5, h6 {
   .site-navbar .site-logo {
     font-weight: 200;
     line-height: 0;
-    display: flex;
-    align-items: center;
     position: relative; }
     .site-navbar .site-logo a {
       font-weight: 200;
