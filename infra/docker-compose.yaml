@@ -3,9 +3,8 @@ version: '3.8'
 services:
 
   web:
-    build:
-      context: ../website/
-      dockerfile: Dockerfile
+    image: evol93/website-by-designer
+    restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
