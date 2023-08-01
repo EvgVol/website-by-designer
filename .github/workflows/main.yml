@@ -55,7 +55,6 @@ jobs:
             sudo echo EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }} >> .env
             sudo echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
 
-            cd infra/
             sudo docker pull evol93/website-by-designer:latest
             sudo docker-compose stop
             sudo docker-compose rm web
