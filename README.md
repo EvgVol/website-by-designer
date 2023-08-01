@@ -1,5 +1,5 @@
 # The website by design presentations 
-[![Workflow](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml) [![Python Version](https://img.shields.io/badge/python-v3.11-blue)](https://www.python.org/downloads/release/python-3110/) [![Django Version](https://img.shields.io/badge/django-v4.2-green)](https://docs.djangoproject.com/en/4.2/) [![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/) [![docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/) [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)  [![Bootstrap Version](https://img.shields.io/badge/bootstrap-v4.3-orange)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) [![HTML](https://img.shields.io/badge/HTML-v5-red)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS-v3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Workflow](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml) [![Python Version](https://img.shields.io/badge/python-v3.11-blue)](https://www.python.org/downloads/release/python-3110/) [![Django Version](https://img.shields.io/badge/django-v4.2-green)](https://docs.djangoproject.com/en/4.2/) [![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/) [![Docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/) [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)  [![Bootstrap Version](https://img.shields.io/badge/bootstrap-v4.3-orange)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) [![HTML](https://img.shields.io/badge/HTML-v5-red)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS-v3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 
 
@@ -17,7 +17,8 @@ Contact form for potential collaborations
 ## Technologies Used
 * Django
 * Docker
-* Docker Compose
+* Nginx
+* Yandex.Cloud
 * Bootstrap framework
 * HTML
 * CSS
