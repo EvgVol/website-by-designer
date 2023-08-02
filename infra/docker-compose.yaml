@@ -9,7 +9,7 @@ services:
       - static_value:/app/static/
       - media_value:/app/media/
     env_file:
-      - ./.env
+      - ../.env
 
   nginx:
     image: nginx:1.21.3-alpine
