@@ -11,7 +11,8 @@ def home(request):
             order = form.save()
             send_contact_email_message(order)
             return render(
-                request, 'core/index.html', {'form': OrderForm(), 'success': True}
+                request, 'core/index.html', {'form': OrderForm(),
+                                             'success': True}
             )
     else:
         form = OrderForm()
