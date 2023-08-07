@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from .forms import OrderForm
 from .email import send_contact_email_message
+from .telegram import send_telegram_notification
 
 
 def home(request):
@@ -10,6 +11,7 @@ def home(request):
         if form.is_valid():
             order = form.save()
             send_contact_email_message(order)
+            send_telegram_notification(order)
             return render(
                 request, 'core/index.html', {'form': OrderForm(),
                                              'success': True}
