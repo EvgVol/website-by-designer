@@ -141,10 +141,11 @@ Execute the commands one by one:
 sudo docker-compose exec web python manage.py migrate
 sudo docker-compose exec web python manage.py createsuperuser
 sudo docker-compose exec web python manage.py collectstatic --no-input
-sudo docker-compose exec web python manage.py importcsv
 ```
 
 The project is now available at http://011.222.333.444/.
+
+
 
 ## Credits
 This project was created by [Evgeniy Volochek](https://github.com/EvgVol). The Bootstrap framework was used to assist with the layout and styling of the website.
