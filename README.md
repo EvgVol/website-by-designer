@@ -145,7 +145,29 @@ sudo docker-compose exec web python manage.py collectstatic --no-input
 
 The project is now available at http://011.222.333.444/.
 
+## The Chicken or the Egg?
 
+Download the script to your working directory as init-letsencrypt.sh:
+
+```bash
+cd infra/
+curl -L https://raw.githubusercontent.com/wmnnd/nginx-certbot/master/init-letsencrypt.sh > init-letsencrypt.sh
+```
+Edit the script to add in your domain(s) and your email address. If you’ve changed the directories of the shared Docker volumes, make sure you also adjust the data_path variable as well.
+
+Then run:
+```bash
+chmod +x init-letsencrypt.sh
+``` 
+and
+
+```bash
+sudo ./init-letsencrypt.sh
+```
+
+Everything is in place now. The initial certificates have been obtained and our containers are ready to launch. Simply run docker-compose up and enjoy your HTTPS-secured website or app.
+
+The project is now available at https://011.222.333.444/.
 
 ## Credits
 This project was created by [Evgeniy Volochek](https://github.com/EvgVol). The Bootstrap framework was used to assist with the layout and styling of the website.
