@@ -14,6 +14,7 @@ from .telegram import send_telegram_notification
 def save_form_async(form):
     return form.save()
 
+
 @csrf_protect
 async def home(request):
     if request.method == 'POST':
