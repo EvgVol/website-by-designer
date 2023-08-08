@@ -11,7 +11,7 @@ from .telegram import send_telegram_notification
 
 
 async def save_form_async(form):
-    await database_sync_to_async(form.save)()   
+    await database_sync_to_async(form.save)()
 
 
 @csrf_protect
