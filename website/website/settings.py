@@ -13,6 +13,8 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', cast=bool, default=True)
 
+CSRF_TRUSTED_ORIGINS = ['https://*.designstudio63.ru']
+
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='127.0.0.1')
 
 INSTALLED_APPS = [
