@@ -1,11 +1,14 @@
 from django.conf import settings
+from aiogram import Bot, Dispatcher
+from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
-from telegram import Bot, ParseMode
+
+bot = Bot(token=settings.TELEGRAM_TOKEN)
+dp = Dispatcher(bot)
+dp.middleware.setup(LoggingMiddleware())
 
 
-def send_telegram_notification(order):
-    bot = Bot(token=settings.TELEGRAM_TOKEN)
-
+async def send_telegram_notification(order):
     if order.email:
         email_text = f"Email: {order.email}\n"
     else:
@@ -19,6 +22,4 @@ def send_telegram_notification(order):
         email_text
     )
 
-    bot.send_message(chat_id=settings.TELEGRAM_CHAT_ID,
-                     text=message,
-                     parse_mode=ParseMode.HTML)
+    await bot.send_message(chat_id=settings.TELEGRAM_CHAT_ID, text=message)
