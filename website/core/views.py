@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
 from channels.db import database_sync_to_async
-from django.views.decorators.csrf import csrf_protect
 
 import asyncio
 
@@ -10,11 +9,11 @@ from .email import send_contact_email_message
 from .telegram import send_telegram_notification
 
 
-async def save_form_async(form):
-    await database_sync_to_async(form.save)()
+@database_sync_to_async
+def save_form_async(form):
+    return form.save()
 
 
-@csrf_protect
 async def home(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
