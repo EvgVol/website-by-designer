@@ -6,6 +6,6 @@ app_name = 'core'
 
 
 urlpatterns = [
-    path('', views.home, name='index'),
+    path('', views.main, name='index'),
     path('policy/', views.policy, name='policy'),
 ]
