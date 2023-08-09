@@ -6,7 +6,7 @@ from functools import wraps
 import asyncio
 
 from .forms import OrderForm
-from .email import send_contact_email_message
+# from .email import send_contact_email_message
 from .telegram import send_telegram_notification
 
 
