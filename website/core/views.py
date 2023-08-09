@@ -6,7 +6,7 @@ from functools import wraps
 import asyncio
 
 from .forms import OrderForm
-# from .email import send_contact_email_message
+from .email import send_contact_email_message
 from .telegram import send_telegram_notification
 
 
@@ -30,7 +30,7 @@ async def main(request):
         if form.is_valid():
             order = await save_form_async(form)
             tasks = [
-                # send_contact_email_message(order),
+                send_contact_email_message(order),
                 send_telegram_notification(order),
             ]
             await asyncio.gather(*tasks)
