@@ -2,13 +2,12 @@
 {% block title %}
     Агентство презентаций - 8 лет успешной работы и 1500 реализованных проектов | Design.studio63
 {% endblock %}
-
+{% csrf_token %}
 {% block content %}
   {% include 'core/includes/home_section.html' %}
   {% include 'core/includes/about_section.html' %}
   <div class="site-section" id="portfolio-section">
     <div class="container">
-
       <div class="row mb-5 ">
         <div class="col-md-8 section-title text-center mx-auto">
           <span class="sub-title mb-2 d-block">Наши работы</span>
