@@ -15,6 +15,9 @@ DEBUG = config('DEBUG', cast=bool, default=True)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='127.0.0.1')
 
+CSRF_COOKIE_DOMAIN = config('CSRF_COOKIE_DOMAIN')
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS')
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

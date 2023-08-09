@@ -78,6 +78,8 @@ jobs:
             sudo echo EMAIL_HOST_USER=${{ secrets.EMAIL_HOST_USER }} >> .env
             sudo echo EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }} >> .env
             sudo echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
+            sudo echo CSRF_COOKIE_DOMAIN=${{ secrets.CSRF_COOKIE_DOMAIN }} >> .env
+            sudo echo CSRF_TRUSTED_ORIGINS=${{ secrets.CSRF_TRUSTED_ORIGINS }} >> .env
             
             cd infra/
             sudo docker pull evol93/website-by-designer:latest
