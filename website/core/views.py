@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_exempt
 from channels.db import database_sync_to_async
+from functools import wraps
 
 import asyncio
 
@@ -15,10 +16,11 @@ def save_form_async(form):
     return form.save()
 
 
-async def async_csrf_exempt(view_func):
-    def wrapped_view(*args, **kwargs):
-        return asyncio.ensure_future(view_func(*args, **kwargs))
-    wrapped_view = csrf_exempt(wrapped_view)
+def async_csrf_exempt(view_func):
+    @wraps(view_func)
+    async def wrapped_view(*args, **kwargs):
+        return await view_func(*args, **kwargs)
+    wrapped_view.csrf_exempt = True
     return wrapped_view
 
 
