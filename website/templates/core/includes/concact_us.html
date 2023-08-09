@@ -10,7 +10,8 @@
       {% include 'includes/cycle_forms.html' %}
       <div class="row">
         <div class="col-12 my-0">
-          <button type="submit" class="btn btn-primary btn-md" onsubmit="ym(94560664,'reachGoal','submitForm'); return true;">Отправить</button>
+          <button type="submit" class="btn btn-primary btn-md">Отправить</button>
+          {% comment %} <button type="submit" class="btn btn-primary btn-md" onsubmit="ym(94560664,'reachGoal','submitForm'); return true;">Отправить</button> {% endcomment %}
           <div class="text-center mt-3"> <small>Нажимая на кнопку отправить, я даю свое согласие на обработку персональных данных в соответствии с <a href="{% url 'core:policy' %}">Политикой конфиденциальности</a>.</small> </div>
         </div>
       </div>
