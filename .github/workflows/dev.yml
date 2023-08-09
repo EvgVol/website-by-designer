@@ -78,8 +78,6 @@ jobs:
             sudo echo EMAIL_HOST_USER=${{ secrets.EMAIL_HOST_USER }} >> .env
             sudo echo EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }} >> .env
             sudo echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
-            sudo echo TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }} >> .env
-            sudo echo TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }} >> .env
             
             cd infra/
             sudo docker pull evol93/dev-website-by-designer:latest
