@@ -10,11 +10,6 @@ services:
       - media_value:/app/media/
     env_file:
       - ../.env
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "10"
 
   nginx:
     image: nginx:1.21.3-alpine
