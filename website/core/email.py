@@ -25,4 +25,3 @@ async def send_contact_email_message(order):
         await server.login(settings.EMAIL_HOST_USER,
                            settings.EMAIL_HOST_PASSWORD)
         await server.send_message(email)
-
