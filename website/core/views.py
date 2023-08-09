@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
-from django.views.decorators.csrf import csrf_exempt
 from channels.db import database_sync_to_async
 from functools import wraps
 
