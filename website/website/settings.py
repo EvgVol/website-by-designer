@@ -13,8 +13,6 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', cast=bool, default=True)
 
-CSRF_TRUSTED_ORIGINS = ['https://*.designstudio63.ru']
-
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='127.0.0.1')
 
 INSTALLED_APPS = [
@@ -105,6 +103,3 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str, default='your-pass
 EMAIL_SERVER = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = config('EMAIL_ADMIN', cast=str, default=['your-email@yandex.ru'])
-
-TELEGRAM_TOKEN = config('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')

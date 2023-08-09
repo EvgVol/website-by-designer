@@ -78,13 +78,9 @@ jobs:
             sudo echo EMAIL_HOST_USER=${{ secrets.EMAIL_HOST_USER }} >> .env
             sudo echo EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }} >> .env
             sudo echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
-            sudo echo TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }} >> .env
-            sudo echo TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }} >> .env
             
             cd infra/
             sudo docker pull evol93/website-by-designer:latest
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker-compose rm nginx
-            sudo docker-compose rm certbot
             sudo docker-compose up -d --build
