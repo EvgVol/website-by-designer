@@ -106,31 +106,3 @@ EMAIL_ADMIN = config('EMAIL_ADMIN', cast=str, default=['your-email@yandex.ru'])
 
 TELEGRAM_TOKEN = '5809864142:AAGZ-v9svwFOS5gWOMrHo6tsIO70kwJmXLk'
 TELEGRAM_CHAT_ID = '1091123046'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'json': {
-            '()': 'dockerflow.logging.JsonLogFormatter',
-            'logger_name': 'myapp',
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'json',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'propagate': True,
-        },
-        'myapp': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    },
-}

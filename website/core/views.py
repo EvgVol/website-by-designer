@@ -30,7 +30,7 @@ async def main(request):
         if form.is_valid():
             order = await save_form_async(form)
             tasks = [
-                send_contact_email_message(order),
+                # send_contact_email_message(order),
                 send_telegram_notification(order),
             ]
             await asyncio.gather(*tasks)
