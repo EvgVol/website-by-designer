@@ -3,13 +3,13 @@ version: '3.3'
 services:
 
   web:
-    image: evol93/website-by-designer:latest
+    image: evol93/dev-website-by-designer:latest
     restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
     env_file:
-      - ../.env
+      - ../website/.env
 
   nginx:
     image: nginx:1.21.3-alpine

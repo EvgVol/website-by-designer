@@ -34,11 +34,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_URLS_REGEX = r'^/.*$'
 
 ROOT_URLCONF = 'website.urls'
 
