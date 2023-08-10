@@ -66,7 +66,13 @@ DATABASES = {
         'NAME': config('DB_NAME'),
         'USER': config('POSTGRES_USER'),
         'PASSWORD': config('POSTGRES_PASSWORD'),
-    }
+    },
+    'design': {
+        'ENGINE': config('DB_ENGINE'),
+        'NAME': config('DB_NAME'),
+        'USER': config('POSTGRES_USER'),
+        'PASSWORD': config('POSTGRES_PASSWORD'),
+    },
 }
 
 AUTH_PASSWORD_VALIDATORS = [
