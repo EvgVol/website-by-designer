@@ -39,7 +39,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://design-studio63.sytes.net",
-    "https://web:8000",
+    "http://web:8000",
 ]
 
 ROOT_URLCONF = 'website.urls'
