@@ -26,8 +26,8 @@ class Order(models.Model):
     time_create = models.DateTimeField('Дата заявки', auto_now_add=True)
 
     class Meta:
-        verbose_name = 'Заявка'
-        verbose_name_plural = 'Заявки'
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
         ordering = ['-time_create']
 
     def __str__(self):
