@@ -2,12 +2,21 @@ version: '3.3'
 
 services:
 
+  db:
+    image: postgres:13.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ../website/.env
+
   web:
     image: evol93/dev-website-by-designer:latest
     restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
+    depends_on:
+      - db
     env_file:
       - ../website/.env
 
@@ -35,6 +44,7 @@ services:
       - ./certbot/www:/var/www/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
-volumes: 
-  static_value: 
+volumes:
+  postgres_data:
+  static_value:
   media_value:

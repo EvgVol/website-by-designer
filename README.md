@@ -27,13 +27,46 @@ Contact form for potential collaborations
 To install and run the project locally, follow these steps:
 
 1. Clone the repository using:
-```
+```bash
 git clone https://github.com/evgvol/website-by-designer.git
 ```
 2. Create a .env file in the root directory of the project.
 
 3. Add the following environment variables to the .env file:
+```bash
+SECRET_KEY='django-insecure-+%_0#njq$hkob)bx)les6ta6vh!@9=d5%mz3j#rvfcj%2)k4-u'
+DEBUG=False
+ALLOWED_HOSTS=127.0.0.1, localhost
+EMAIL_HOST_USER='your-email@yandex.ru'
+EMAIL_HOST_PASSWORD='your-password'
+EMAIL_ADMIN='your-email@yandex.ru'
+TELEGRAM_TOKEN='your-telegram-token'
+TELEGRAM_CHAT_ID='your-telegram-id'
 ```
+
+4. Navigate to the project directory using:
+```bash
+cd website-by-designer/website
+```
+
+5. Install the dependencies using the following command: 
+```bash
+pip install -r requirements.txt
+```
+
+6. Start the Django development server using the following command:
+```bash
+python manage.py runserver
+```
+
+7. Open your web browser and navigate to http://localhost:8000 to view the application.
+[![example](https://raw.githubusercontent.com/EvgVol/website-by-designer/main/example.gif)]()
+
+We will perform all actions in Docker, docker-compose both on the local machine and on VM server.
+We will pre-install the necessary components for work on the VM in the cloud:
+
+*0. Add the following environment variables to Github Actions:
+```bash
 SECRET_KEY='django-insecure-+%_0#njq$hkob)bx)les6ta6vh!@9=d5%mz3j#rvfcj%2)k4-u'
 DEBUG=False
 ALLOWED_HOSTS=127.0.0.1, localhost
@@ -46,28 +79,9 @@ PASSWORD='your-password'
 SSH_KEY='your-keys'
 DOCKER_USERNAME='login-by-dockerhub'
 DOCKER_PASSWORD='password-by-dockerhub'
+TELEGRAM_TOKEN='your-telegram-token'
+TELEGRAM_CHAT_ID='your-telegram-id'
 ```
-
-4. Navigate to the project directory using:
-```
-cd website-by-designer/website
-```
-
-5. Install the dependencies using the following command: 
-```
-pip install -r requirements.txt
-```
-
-6. Start the Django development server using the following command:
-```
-python manage.py runserver
-```
-
-7. Open your web browser and navigate to http://localhost:8000 to view the application.
-[![example](https://raw.githubusercontent.com/EvgVol/website-by-designer/main/example.gif)]()
-
-We will perform all actions in Docker, docker-compose both on the local machine and on the Yandex.Cloud VM server.
-We will pre-install the necessary components for work on the VM in the cloud:
 
 *1. Connect to your server*
 
