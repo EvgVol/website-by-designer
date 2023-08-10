@@ -8,12 +8,13 @@ class Order(models.Model):
     phone_number = models.CharField(
         'Номер телефона', validators=[
             RegexValidator(
-                regex=r'^8\d{10}$',
-                message="Номер телефона в формате `89876543210`"
+                regex=r'^(\+7|8)[0-9]{10}$',
+                message='Номер телефона должен быть в формате '
+                        '8XXXXXXXXXX или +7XXXXXXXXXX.'
             )
         ],
         blank=False,
-        help_text='Укажите номер телефона для связи', max_length=11
+        help_text='Укажите номер телефона для связи', max_length=12
     )
     email = models.EmailField(
         'Электронный адрес (email)', max_length=150,
