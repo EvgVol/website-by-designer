@@ -37,10 +37,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://design-studio63.sytes.net",
-    "http://web:8000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_URLS_REGEX = r'^/.*$'
 
 ROOT_URLCONF = 'website.urls'
 
