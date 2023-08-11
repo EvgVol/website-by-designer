@@ -80,7 +80,13 @@ jobs:
             sudo echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
             sudo echo TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }} >> .env
             sudo echo TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }} >> .env
-            
+            sudo echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
+            sudo echo DB_NAME=${{ secrets.DB_NAME }} >> .env
+            sudo echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
+            sudo echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
+            sudo echo POSTGRES_HOST=${{ secrets.POSTGRES_HOST }} >> .env
+            sudo echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+
             cd infra/
             sudo docker pull evol93/website-by-designer:latest
             sudo docker-compose stop

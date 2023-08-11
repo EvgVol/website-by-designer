@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
 from channels.db import database_sync_to_async
-from functools import wraps
 
 import asyncio
 
@@ -15,15 +14,6 @@ def save_form_async(form):
     return form.save()
 
 
-def async_csrf_exempt(view_func):
-    @wraps(view_func)
-    async def wrapped_view(*args, **kwargs):
-        return await view_func(*args, **kwargs)
-    wrapped_view.csrf_exempt = True
-    return wrapped_view
-
-
-@async_csrf_exempt
 async def main(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)

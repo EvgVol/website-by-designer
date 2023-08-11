@@ -530,9 +530,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 8rem;
     font-weight: 900;
     line-height: 1; }
+    
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
-        font-size: 4rem; } }
+      font-size: 4rem; } }
+    @media (max-width: 750px) {
+      .site-blocks-cover h1 {
+        font-size: 3rem; } }  
+    @media (max-width: 576px) {
+      .site-blocks-cover h1 {
+        font-size: 2rem; } }  
   .site-blocks-cover .sub-text {
     font-size: 1.4rem;
     color: gray;
@@ -559,7 +566,7 @@ h1, h2, h3, h4, h5, h6 {
           position: absolute;
           content: "";
           background: #fff;
-          opacity: .5;
+          opacity: .1;
           z-index: 2;
           top: 0;
           left: 0;

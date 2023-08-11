@@ -1,5 +1,5 @@
 # The website by design presentations 
-[![Workflow](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml) [![Python Version](https://img.shields.io/badge/python-v3.11-blue)](https://www.python.org/downloads/release/python-3110/) [![Django Version](https://img.shields.io/badge/django-v4.2-green)](https://docs.djangoproject.com/en/4.2/) [![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/) [![Docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/) [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)  [![Bootstrap Version](https://img.shields.io/badge/bootstrap-v4.3-orange)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) [![HTML](https://img.shields.io/badge/HTML-v5-red)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS-v3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Certbot](https://img.shields.io/badge/-Certbot-003A6E?style=flat&logo=letsencrypt&logoColor=white)](https://certbot.eff.org/) [![Workflow](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml) [![Python Version](https://img.shields.io/badge/python-v3.11-blue)](https://www.python.org/downloads/release/python-3110/) [![Django Version](https://img.shields.io/badge/django-v4.2-green)](https://docs.djangoproject.com/en/4.2/) [![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/) [![Docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/) [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13.0-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)  [![Bootstrap Version](https://img.shields.io/badge/bootstrap-v4.3-orange)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) [![HTML](https://img.shields.io/badge/HTML-v5-red)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS-v3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 
 
@@ -27,13 +27,46 @@ Contact form for potential collaborations
 To install and run the project locally, follow these steps:
 
 1. Clone the repository using:
-```
+```bash
 git clone https://github.com/evgvol/website-by-designer.git
 ```
 2. Create a .env file in the root directory of the project.
 
 3. Add the following environment variables to the .env file:
+```bash
+SECRET_KEY='django-insecure-+%_0#njq$hkob)bx)les6ta6vh!@9=d5%mz3j#rvfcj%2)k4-u'
+DEBUG=False
+ALLOWED_HOSTS=127.0.0.1, localhost
+EMAIL_HOST_USER='your-email@yandex.ru'
+EMAIL_HOST_PASSWORD='your-password'
+EMAIL_ADMIN='your-email@yandex.ru'
+TELEGRAM_TOKEN='your-telegram-token'
+TELEGRAM_CHAT_ID='your-telegram-id'
 ```
+
+4. Navigate to the project directory using:
+```bash
+cd website-by-designer/website
+```
+
+5. Install the dependencies using the following command: 
+```bash
+pip install -r requirements.txt
+```
+
+6. Start the Django development server using the following command:
+```bash
+python manage.py runserver
+```
+
+7. Open your web browser and navigate to http://localhost:8000 to view the application.
+[![example](https://raw.githubusercontent.com/EvgVol/website-by-designer/main/example.gif)]()
+
+We will perform all actions in Docker, docker-compose both on the local machine and on VM server.
+We will pre-install the necessary components for work on the VM in the cloud:
+
+*0. Add the following environment variables to Github Actions:
+```bash
 SECRET_KEY='django-insecure-+%_0#njq$hkob)bx)les6ta6vh!@9=d5%mz3j#rvfcj%2)k4-u'
 DEBUG=False
 ALLOWED_HOSTS=127.0.0.1, localhost
@@ -46,28 +79,9 @@ PASSWORD='your-password'
 SSH_KEY='your-keys'
 DOCKER_USERNAME='login-by-dockerhub'
 DOCKER_PASSWORD='password-by-dockerhub'
+TELEGRAM_TOKEN='your-telegram-token'
+TELEGRAM_CHAT_ID='your-telegram-id'
 ```
-
-4. Navigate to the project directory using:
-```
-cd website-by-designer/website
-```
-
-5. Install the dependencies using the following command: 
-```
-pip install -r requirements.txt
-```
-
-6. Start the Django development server using the following command:
-```
-python manage.py runserver
-```
-
-7. Open your web browser and navigate to http://localhost:8000 to view the application.
-[![example](https://raw.githubusercontent.com/EvgVol/website-by-designer/main/example.gif)]()
-
-We will perform all actions in Docker, docker-compose both on the local machine and on the Yandex.Cloud VM server.
-We will pre-install the necessary components for work on the VM in the cloud:
 
 *1. Connect to your server*
 
