@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
 from channels.db import database_sync_to_async
-from http import HTTPStatus
 
 import asyncio
 
