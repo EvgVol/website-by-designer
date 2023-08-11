@@ -24,7 +24,6 @@ async def main(request):
                 send_telegram_notification(order),
             ]
             await asyncio.gather(*tasks)
-
             return render(
                 request, 'core/index.html', {'form': OrderForm(),
                                              'success': True}
