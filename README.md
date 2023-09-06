@@ -1,7 +1,41 @@
 # The website by design presentations 
 [![Certbot](https://img.shields.io/badge/-Certbot-003A6E?style=flat&logo=letsencrypt&logoColor=white)](https://certbot.eff.org/) [![Workflow](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/EvgVol/website-by-designer/actions/workflows/main.yml) [![Python Version](https://img.shields.io/badge/python-v3.11-blue)](https://www.python.org/downloads/release/python-3110/) [![Django Version](https://img.shields.io/badge/django-v4.2-green)](https://docs.djangoproject.com/en/4.2/) [![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/) [![Docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/) [![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13.0-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)  [![Bootstrap Version](https://img.shields.io/badge/bootstrap-v4.3-orange)](https://getbootstrap.com/docs/4.3/getting-started/introduction/) [![HTML](https://img.shields.io/badge/HTML-v5-red)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) [![CSS](https://img.shields.io/badge/CSS-v3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-
+```bash
+.
+│
+├─ .github/                      # GitHub-related files  
+│   └─workflows/                 # GitHub Actions workflow configurations
+│       ├─ dev.yml               # YAML configuration for dev workflow
+│       └─ main.yml              # YAML configuration for main workflow
+│
+├─ infra/                        # Infrastructure-related files and scripts
+│   ├─ nginx/                    # Nginx configuration files
+│   │   ├─ default.conf          # Default Nginx configuration
+│   │   └─ local.conf            # Local Nginx configuration
+│   ├─ docker-compose.yaml       # Docker Compose configuration
+│   └─ init-letsencrypt.sh       # Shell script for initializing Let's Encrypt
+│
+├─ venv/                         # Virtual environment for the project
+│
+├─ website/                      # Website project folder
+│  ├── core/                     # Core application files
+│  ├── static/                   # Static files (e.g., CSS, JavaScript)
+│  ├── templates/                # HTML templates
+│  └─ website/                   # Website-specific files
+│       ├─ .env                  # Environment variables configuration
+│       ├─ .gitignore            # Git ignore rules
+│       ├─ db.sqlite3            # SQLite database file
+│       ├─ Dockerfile            # Docker configuration file
+│       ├─ manage.py             # Django management script
+│       └─ requirements.txt      # Python dependencies
+│
+├─ LICENSE                       # Project license file
+│
+├─ README.md                     # Project README file
+│
+└─ setup.cfg                     # Project setup configuration
+```
 
 ## Description
 
